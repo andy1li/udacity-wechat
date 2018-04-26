@@ -1,0 +1,64 @@
+/* app.wxss */
+.app {
+  color: #111;
+  background-color: #000;
+}
+
+/* main */
+.main {
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0rpx;
+  height: 100%;
+  width: 100%;
+  transition: left .1s;
+}
+
+/* nav-bar */
+.nav-bar {
+  box-sizing: border-box;
+  color: #fefefe; 
+  text-shadow: 
+      1px   1px 1px #111,
+    -.9px -.9px   0 #111,  
+     .9px -.9px   0 #111,
+    -.9px  .9px   0 #111,
+     .9px  .9px   0 #111;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 120rpx;
+  padding-top: 54rpx;
+  position: absolute;
+  z-index: 1;
+}
+
+.nav-bar__icon {
+  padding-left: 25rpx;
+  padding-right: 15rpx;
+}
+
+/* jumbotron */
+.jumbotron {
+  position: relative;
+  border-bottom: 1rpx solid #eee;
+  box-sizing: border-box;
+  min-height: 480rpx; 
+}
+
+.jumbotron__title {
+  position: absolute;
+  color: white;
+  font-size: 1.4em;
+  font-weight: 500;
+  text-shadow: 
+      2px   2px 2px #111,
+    -.9px -.9px   0 #111,  
+     .9px -.9px   0 #111,
+    -.9px  .9px   0 #111,
+     .9px  .9px   0 #111;
+  bottom: 0;
+  margin: 35rpx 
+}

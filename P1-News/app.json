@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundColor": "#fefefe",
+    "backgroundTextStyle": "dark",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
+  }
+}

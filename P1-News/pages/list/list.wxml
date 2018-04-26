@@ -1,0 +1,51 @@
+<!--pages/list/list.wxml-->
+<view class='app'>
+  <!-- nav-drawer -->
+  <view class='nav-drawer' style='width:{{drawerWidth}}'>
+    <view wx:for='{{categories}}' wx:key='{{item.type}}'>
+      <view class='{{item.name == currentCategory && "nav-drawer__item-active"}}'
+        id='{{item.name}}'
+        bindtap='setCategory'> 
+        <text>{{item.name}}</text> 
+      </view>
+    </view>
+  </view>
+  <!-- nav-drawer ends -->
+
+  <!-- main -->
+  <view class='main' bindtap='closeDrawer'
+    style='left:{{drawerWidth}}'>
+    <!-- nav-bar -->
+    <view class='nav-bar' bindtap='toggleDrawer'>
+      <view class='nav-bar__icon'>☰</view>
+      <text>{{currentCategory}}</text>
+    </view>
+    <!-- nav-bar ends -->
+
+    <!-- jumbotron -->
+    <view class='jumbotron'
+      id='{{jumbotron.id}}'
+      bindtap='toDetail'
+      style='background-image: url({{jumbotron.firstImage}})'>
+      <view class='jumbotron__title'>{{jumbotron.title}}</view>
+    </view>  
+    <!-- jumbotron ends-->
+
+    <!-- newsList -->
+    <scroll-view>
+      <view class='news-item' 
+        id='{{item.id}}' bindtap='toDetail'
+        wx:for='{{newsList}}' wx:key='{{item.id}}'>
+        <view class='new-item__info'>
+          <text class='new-item__title'>{{item.title}}</text>
+          <text class='new-item__meta'>{{item.source}} {{item.date}}</text>
+        </view>
+         
+        <image src='{{item.firstImage}}' mode='aspectFill'/>
+      </view>
+    </scroll-view>
+    <!-- newsList ends -->
+    
+  </view>
+  <!-- main ends -->
+</view>

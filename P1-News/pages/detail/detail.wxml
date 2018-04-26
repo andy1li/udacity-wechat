@@ -1,0 +1,45 @@
+<!--pages/detail/detail.wxml-->
+<view class='main'>
+    <!-- nav-bar -->
+    <view class='nav-bar' bindtap='toList'>
+      <view class='nav-bar__icon'>←</view>
+      <text>返回</text>
+    </view>
+    <!-- nav-bar ends -->
+
+    <!-- jumbotron -->
+    <view class='jumbotron'
+      id='{{jumbotron.id}}'      
+      style='background-image: url({{news.firstImage}})'>
+      <text class='jumbotron__title'>{{news.title}}</text>
+      <view class='jumbotron__meta'>
+        <text>{{news.source}} {{news.date}}</text>
+        <text>阅读 {{news.readCount}}</text>
+      </view>
+    </view>  
+    <!-- jumbotron ends-->
+
+    <!-- content -->
+    <view class='content'>
+      <view wx:for='{{news.content}}' wx:key='{{item.id}}' style='width: 100%' class='{{item.type == "image" && ".content__image"}}'> 
+        <image 
+          wx:if='{{item.type == "image"}}' 
+          src='{{item.src}}' 
+          mode='widthFix' 
+          style='width: 100%'
+        />
+        <view wx:if='{{item.type == "p"}}'
+          class='.content__text'>
+          {{item.text}}
+        </view>
+        <view wx:if='{{item.type == "strong"}}'
+          class='.content__text strong '>
+          {{item.text}}
+        </view>
+      </view>
+    </view>
+    <!-- content ends-->
+    
+</view>
+<!-- main ends -->
+

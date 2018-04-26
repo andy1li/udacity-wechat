@@ -1,0 +1,58 @@
+/* pages/detail/detail.wxss */
+
+/* jumbotron */
+.jumbotron__title {
+  bottom: 35rpx;
+}
+
+.jumbotron__meta {
+  bottom: 0;
+  position: absolute;
+  margin: 18rpx 35rpx;
+  width: 89%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jumbotron__meta text {
+  color: #ddd;
+  font-size: .8rem;
+  font-weight: normal;
+  text-shadow: 
+    1px   1px 1px #111,
+  -.2px -.2px   0 #111,  
+   .2px -.2px   0 #111,
+  -.2px  .2px   0 #111,
+   .2px  .2px   0 #111;
+}
+
+/* content */
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx;
+}
+
+.content view image {
+  margin-bottom: 5px;
+}
+
+.content__text {
+  align-self: flex-start;
+  color: #555;
+  font-size: 1.05rem;
+  margin-bottom: 30rpx;
+}
+
+.content__image + view .content__text { 
+  color: #999;
+  font-size: 1rem;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.content view.strong {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 40rpx 0;
+}
