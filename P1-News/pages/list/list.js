@@ -2,7 +2,6 @@
 
 import { 
   clean,
-  cleanBatch,
   getType 
 } from '../../utils/utils'
   
@@ -56,7 +55,7 @@ Page({
   },
 
   setNewsList(res) {
-    const newList = cleanBatch(res.data.result)
+    const newList = res.data.result.map(clean)
     this.setData({
       jumbotron: newList[0],
       newsList: newList.slice(1)
@@ -70,7 +69,7 @@ Page({
     })
   },
 
-  toggleDrawer(e) {
+  toggleDrawer() {
     this.setData({
       drawerWidth: 
         this.data.drawerWidth == drawerOpenWidth

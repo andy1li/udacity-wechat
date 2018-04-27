@@ -12,16 +12,19 @@ Page({
     wx.request({
       url: detailURL,
       data: { id },
-      success: res => 
-        this.setData({
-          news: clean(res.data.result)
-        }),
+      success: this.setNewDetail,
       fail: console.log,
     })
   },
 
   onLoad(options) {
     this.getNewsDetail(options.id)
+  },
+
+  setNewDetail(res) { 
+    this.setData({
+      news: clean(res.data.result)
+    })
   },
 
   toList() {
