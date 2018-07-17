@@ -10,5 +10,5 @@ export const categories = [
 
 export const drawerOpenWidth = "260rpx"
 export const blankImage = 'jis.gov.jm/media/blank.png'
-export const detailURL = 'http://test-miniprogram.com/api/news/detail'
-export const listURL = 'http://test-miniprogram.com/api/news/list'
+export const detailURL = 'https://test-miniprogram.com/api/news/detail'
+export const listURL = 'https://test-miniprogram.com/api/news/list'

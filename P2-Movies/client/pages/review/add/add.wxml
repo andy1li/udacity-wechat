@@ -1,0 +1,36 @@
+<!--pages/review/add/add.wxml-->
+<view wx:if="{{userInfo=='unloggedin'}}" class='flex'>
+  <view class="unlogin-card">
+    <view class="unlogin-head"></view>
+    <view class="unlogin-info">
+      <view class="unlogin-text">未登录</view>
+      <view class="unlogin-tips">登录后可{{isAudio?'录制':'撰写'}}影评</view>
+    </view>
+  </view>
+
+  <button class="unlogin-btn" type="primary" open-type="getUserInfo" bindgetuserinfo="onTapLogin">微信登录</button>
+</view>
+
+<view class='flex detail-card' wx:if="{{userInfo && userInfo!='unloggedin'}}">
+
+  <image class="poster {{isAudio && 'huge'}}" src='{{movie.image}}' mode='widthFix'></image>
+  <text class="title {{isAudio && 'huge'}}">{{movie.title}}</text>
+
+  <textarea placeholder="撰写影评…" auto-focus bindinput='onTextChange' wx:if="{{!isAudio}}"/>
+
+  <block wx:if="{{isAudio}}">
+    <button class='detail-buttons btn-record' bindtap='onTapRecorder' wx:if='{{!audio}}'>
+      {{isRecording?'🔴 录制中…':'🎤 录制影评'}}
+    </button>
+
+    <view class='flex detail-buttons' wx:else>
+      <button class='btn' bindtap='onTapPlay'>{{isPlaying?'⬛':'▶ '+duration+'s'}}</button>   
+      <button class='btn' bindtap='onTapClear'>↺</button>
+    </view>
+
+  </block>
+</view>
+
+<view class="bottom-tab flex" wx:if='{{userInfo && userInfo!="unloggedin"}}'>
+  <button class="btn-preview {{!canPreview && 'inactive'}}" bindtap="onTapPreview">预览</button>
+</view>

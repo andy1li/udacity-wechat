@@ -1,0 +1,20 @@
+/* pages/review/list/list.wxss */
+.review-card {
+  background-color: #FEFEFE;
+  height: 300rpx;
+  width: 750rpx;
+  border: 1rpx solid #EEE; 
+  box-shadow: 5rpx 5rpx 10rpx -5rpx rgba(60, 60, 60, .3);
+}
+
+.flex.row {
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 30rpx;
+  padding-right: 10rpx;
+}
+
+.review-text {
+  margin: 0 80rpx;
+  overflow: hidden;
+}

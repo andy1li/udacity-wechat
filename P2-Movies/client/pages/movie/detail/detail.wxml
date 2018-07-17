@@ -1,0 +1,12 @@
+<view class='flex detail-card'>
+  <image class='poster' src='{{movie.image}}' mode='widthFix'></image>
+  <text class='title'>{{movie.title}}</text>
+  <text class='description'>{{movie.description}}</text>
+
+  <view class='flex detail-buttons'>
+    <button bindtap='onTapReviewList'>👁 查看影评</button>    
+    <button bindtap='onTapAddReview'>💬 添加影评</button>
+  </view>
+</view>
+
+

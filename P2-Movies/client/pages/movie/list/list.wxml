@@ -1,0 +1,12 @@
+<!--pages/movie/list/list.wxml-->
+<view wx:for='{{movieList}}' wx:key='id'>
+  <navigator url='/pages/movie/detail/detail?id={{item.id}}' class='movie-card'>
+    <image src='{{item.image}}' mode='aspectFit'></image>
+
+    <view class='flex card-info'>
+      <text class='card-title'>{{item.title}}</text> 
+      <text class='card-genre'>类型：{{item.category}}</text> 
+    </view>
+  </navigator>
+</view>
+

@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/movie/list/list",
+    "pages/movie/detail/detail",
+    "pages/review/add/add",
+    "pages/review/preview/preview",
+    "pages/review/list/list",
+    "pages/review/detail/detail",
+    "pages/user/user"
+  ],
+  "window":{
+    "backgroundColor":"#F5F7F9",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FEFEFE",
+    "navigationBarTitleText": "看看侃侃",
+    "navigationBarTextStyle":"black"
+  }
+}

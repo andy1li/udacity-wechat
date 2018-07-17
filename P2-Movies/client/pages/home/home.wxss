@@ -1,0 +1,24 @@
+/* pages/home/home.wxss */
+.home-image {
+  height: 865rpx;   
+  width: 570rpx;    
+  margin-bottom: 30rpx; 
+  box-shadow: 16rpx 20rpx 20rpx -10rpx rgba(60, 60, 60, .4);
+  border-radius: 3px;
+}
+
+.home-image_hover .home-image {
+  box-shadow: 0 15rpx 15rpx -8rpx rgba(60, 60, 60, .4);
+}
+
+.home-title {
+  color: #444;
+  font-size: 1.2rem;
+  font-weight: 450;
+  margin-bottom: 5rpx;
+}
+
+.home-review {
+  color: #666;
+  font-size: .9rem;
+}

@@ -1,0 +1,30 @@
+<!--pages/review/list/list.wxml-->
+<view wx:if=
+'{{!reviewList.length}}'>
+  <text class='gray-text'>暂无影评。快来占领吧！</text>
+</view>
+<view wx:for='{{reviewList}}' wx:key='id'>
+  <navigator url='/pages/review/detail/detail?id={{item.id}}' class='review-card'>
+
+    <view class="flex row review-author">
+      <view class="avatar">
+        <image src='{{item.user_avatar}}'></image>
+      </view>
+      <text>{{item.user_name}}：</text>
+    </view>
+    
+    <view>
+      <button class='play-btn' wx:if='{{!!item.is_audio.data[0]}}'>▶ {{item.duration+'s'}}</button>
+
+      <view class='review-text' wx:if='{{!item.is_audio.data[0]}}'>
+        <text >{{item.text}}</text> 
+      </view>
+    </view>
+
+
+  </navigator>
+</view>
+
+<view class='bottom-tab flex'>
+  <navigator class='flex' delta="5" open-type='navigateBack'>回到首页</navigator>
+</view>

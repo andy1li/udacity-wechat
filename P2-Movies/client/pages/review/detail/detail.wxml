@@ -1,0 +1,30 @@
+<!--pages/review/detail/detail.wxml-->
+<view class='flex detail-card'>
+  <image class="poster {{isAudio && 'huge'}}" src='{{movieImage}}' mode='widthFix'></image>
+  <text class="title {{isAudio && 'huge'}}">{{movieTitle}}</text>
+
+  <view>
+    <view class="flex row review-author">
+      <view class="avatar">
+        <image src='{{userAvatar}}'></image>
+      </view>
+
+      <text>{{userName}}：</text>
+      <button class='play-btn' bindtap='onTapPlay' wx:if="{{isAudio}}">{{isPlaying?'⬛':'▶ '+duration+'s'}}</button> 
+
+    </view>
+    <textarea class='review-text' value='{{text}}' disabled wx:if="{{!isAudio}}"/>
+  </view>
+
+  <view wx:if="{{userInfo=='unloggedin'}}" class='flex {{isAudio && "is-audio"}}'>
+    <view class="unlogin-tips">未登录。登录后可收藏与添加影评。</view>
+    <button class="unlogin-btn" type="primary" open-type="getUserInfo" bindgetuserinfo="onTapLogin">微信登录</button>
+  </view>  
+
+  <view class='flex detail-buttons' wx:if="{{userInfo && userInfo!='unloggedin'}}">  
+    <button bindtap='onTapFavorite'>{{isFavReview ? '★ 取消收藏' : '☆ 收藏影评'}} </button>    
+    <!-- ★ 取消收藏 -->
+    <button bindtap='onTapRightBtn'>💬 {{myReviewId ? '我的影评' : '添加影评'}}</button>
+  </view>
+
+</view>

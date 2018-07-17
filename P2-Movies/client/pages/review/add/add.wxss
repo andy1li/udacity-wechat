@@ -1,0 +1,40 @@
+/* pages/review/add/add.wxss */
+
+.detail-card {
+  height: 80vh;
+}
+
+textarea {
+  border: 1rpx solid #DDD; 
+  height: 500rpx;
+  width: 580rpx;
+  color: #333;
+}
+
+.detail-card .detail-buttons.btn-record {
+  left: 180rpx;
+  width: 44%; 
+  bottom: 150rpx;
+  color: #555;
+  font-size: .95rem;
+}
+
+.detail-card .detail-buttons .btn {
+  width: 230rpx; 
+  color: #555;
+  font-size: .95rem;
+}
+
+.btn-preview {
+  height: 100%;
+  width: 100%;
+  background: #51b92c;
+  color: #FEFEFE;
+  border: 0;
+  border-radius: 0;
+}
+
+.btn-preview.inactive {
+  background: #BBB;
+  color: #EEE; 
+}

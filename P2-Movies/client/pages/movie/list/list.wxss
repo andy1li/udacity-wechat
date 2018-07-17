@@ -1,0 +1,37 @@
+/* pages/movie/list/list.wxss */
+.movie-card {
+  background-color: #FEFEFE;
+  height: 300rpx;
+  width: 650rpx;
+  margin-bottom: 35rpx;
+  border: 1rpx solid #EEE; 
+  box-shadow: 5rpx 5rpx 10rpx -5rpx rgba(60, 60, 60, .3);
+}
+
+.movie-card image {
+  height: 300rpx;
+  width: 208rpx;
+  float: left;
+}
+
+.card-info {
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  padding-left: 30rpx;
+  padding-right: 10rpx;
+}
+
+.card-title {
+  max-width: 300rpx;
+  color: #444;
+  font-size: 1.25rem;
+  font-weight: 450;
+  margin-bottom: 30rpx;
+}
+
+.card-genre {
+  color: #666;
+  font-size: .8rem;
+  margin-bottom: 50rpx;
+}

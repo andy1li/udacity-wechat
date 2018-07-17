@@ -1,0 +1,49 @@
+/* pages/user/user.wxss */
+.review-card {
+  background-color: #FEFEFE;
+  height: 300rpx;
+  width: 650rpx;
+  margin-bottom: 35rpx;
+  border: 1rpx solid #EEE; 
+  box-shadow: 5rpx 5rpx 10rpx -5rpx rgba(60, 60, 60, .3);
+}
+
+.review-card image {
+  height: 300rpx;
+  width: 208rpx;
+  float: left;
+}
+
+.card-info {
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  padding-left: 30rpx;
+  padding-right: 10rpx;
+}
+
+.card-title {
+  max-width: 300rpx;
+  color: #444;
+  font-size: 1.25rem;
+  font-weight: 450;
+  margin-bottom: 30rpx;
+}
+
+.review-text {
+  width: 250rpx;
+  height: 50rpx;
+  overflow: hidden;
+  padding: 0;
+}
+
+.avatar.small {
+  height: 50rpx;
+  width: 50rpx;
+  margin: -5rpx 25rpx 0;
+}
+
+.picker {
+  margin-bottom: 30rpx;
+  color: orange;
+}

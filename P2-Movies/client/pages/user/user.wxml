@@ -1,0 +1,46 @@
+<!--pages/user/user.wxml-->
+<view wx:if="{{userInfo=='unloggedin'}}" class='flex'>
+  <view class="unlogin-card">
+    <view class="unlogin-head"></view>
+    <view class="unlogin-info">
+      <view class="unlogin-text">未登录</view>
+      <view class="unlogin-tips">登录后可查看我发布与收藏的影评。</view>
+    </view>
+  </view>
+
+  <button class="unlogin-btn" type="primary" open-type="getUserInfo" bindgetuserinfo="onTapLogin">微信登录</button>
+</view>
+
+<view class='flex' wx:if="{{userInfo && userInfo!='unloggedin'}}">
+  <picker class='picker' bindchange='bindPickerChange' value='{{pickerIndex}}' range='{{pickerRange}}'>
+    <view>▼ {{pickerRange[pickerIndex]}}</view>
+  </picker>
+  <view wx:if='{{pickerIndex ? !myReviews.length : !favReviews.length}}'>
+    <text class='gray-text'>暂无影评。快去发布/收藏吧！ </text>
+  </view>
+  <view wx:for='{{pickerIndex ? myReviews : favReviews}}' wx:key='id'>
+    <navigator url='/pages/review/detail/detail?id={{item.id}}' class='review-card'>
+      <image src='{{item.movie_image}}' mode='aspectFit'></image>
+
+      <view class='flex card-info'>
+        <text class='card-title'>{{item.movie_title}}</text> 
+
+      <view class="flex row">
+        <view class="avatar small">
+          <image src='{{item.user_avatar}}'></image>
+        </view>
+
+        <button class='play-btn' wx:if='{{!!item.is_audio.data[0]}}'>▶ {{item.duration+'s'}}</button>
+
+        <text class='review-text' wx:if='{{!item.is_audio.data[0]}}'>{{item.text}}</text> 
+        </view>
+
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class='bottom-tab flex'>
+  <navigator class='flex' open-type='navigateBack'>回到首页</navigator>
+</view>
+

@@ -1,0 +1,196 @@
+/**app.wxss**/
+page {
+  background: #F5F7F9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 45rpx 50rpx;
+}
+
+.flex {
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: space-around; 
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+/* bottom-tab */
+
+.bottom-tab {
+  position: fixed; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100rpx;
+  flex-direction: row;
+  border-top: 1rpx solid #DDD; 
+  background-color: #FEFEFE;
+}
+
+.bottom-tab navigator {
+  height: 100%;
+  width: 100%;
+  color: #999;
+}
+
+/* detail-card */
+
+.detail-card {
+  background: #FEFEFE;
+  top: 50rpx;
+  height: 88vh;
+  width: 650rpx;
+  border-radius: 3px;
+  border: 1rpx solid #DDD; 
+  justify-content: flex-start;
+  position: relative;
+}
+
+.detail-card image.poster  {
+  width: 250rpx;
+  margin-bottom: 35rpx;
+  box-shadow: 10rpx 10rpx 10rpx -5rpx rgba(60, 60, 60, .3);
+  border-radius: 2px;
+  position: absolute; 
+  margin-top: -60rpx;
+}
+
+.detail-card image.huge.poster  {
+  width: 400rpx;
+}
+
+.detail-card .title {
+  margin: 340rpx 80rpx 30rpx;
+  color: #444;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.detail-card .title.huge {
+  margin-top: 580rpx;
+}
+
+.detail-card .description {
+  color: #555;
+  margin: 0 80rpx;
+}
+
+.detail-card .detail-buttons {
+  left: 65rpx;  
+  width: 82%; 
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 50rpx;
+}
+
+.detail-card .detail-buttons button {
+  background: #FEFEFE;
+  color: #999;
+  font-size: .95rem;
+}
+
+.play-btn {
+  width: 230rpx; 
+  color: #555;
+  font-size: .95rem;
+}
+
+/* unlogin */
+
+.unlogin-card {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 27rpx 40rpx;
+  height: 200rpx;
+  width: 600rpx;
+  background: #FEFEFE;
+  box-shadow: 0 2rpx 13rpx 5rpx rgba(0, 0, 0, 0.02);
+  border-radius: 13rpx;
+}
+
+.unlogin-head {
+  flex-shrink: 0;
+  margin-left: 53rpx;
+  height: 100rpx;
+  width: 100rpx;
+  background: #CCC;
+  border-radius: 50%;
+}
+
+.unlogin-info {
+  flex: 1;
+  margin-left: 31rpx;
+}
+
+.unlogin-text {
+  line-height: 48rpx;
+  font-size: 34rpx;
+  color: rgba(29, 29, 38, 0.8);
+  font-weight: bold;
+}
+
+.unlogin-tips {
+  margin-top: 6rpx;
+  line-height: 33rpx;
+  font-size: 24rpx;
+  color: #8B8B8B;
+}
+
+.unlogin-btn {
+  color: #FEFEFE;
+  font-size: .98rem;
+} 
+
+/* avatar */
+
+.avatar {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 30rpx;
+}
+
+.avatar.small {
+  height: 50rpx;
+  width: 50rpx;
+  margin: 15rpx;
+}
+
+.avatar image {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.avatar.small image {
+  height: 50rpx;
+  width: 50rpx;
+}
+
+/* review  */
+
+.flex.row.review-author {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.review-text {
+  padding-left: 60rpx;
+  height: 350rpx;
+  width: 500rpx;
+  color: #444;
+  font-size: .95rem;
+}
+
+/* other */
+
+.gray-text {
+  color: gray;
+  font-size: .9rem;
+}

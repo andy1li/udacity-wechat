@@ -1,0 +1,20 @@
+<!--pages/home/home.wxml-->
+<navigator class='flex' hover-class='home-image_hover' url="/pages/movie/detail/detail?id={{movieId}}">
+  <image src='{{movieImage}}' class='home-image' mode='aspectFill'></image>
+
+  <text class='home-title'>{{movieTitle}}</text>
+</navigator>
+
+<navigator class='flex row' url='/pages/review/detail/detail?id={{reviewId}}' wx:if='{{reviewId!=-1}}'>
+  <view class="flex row home-review">
+    <view class="avatar small">
+      <image src='{{userAvatar}}'></image>
+    </view>
+    <text>{{userName}}给你推荐了一部电影</text>
+  </view>
+</navigator>
+
+<view class='flex bottom-tab'>
+  <navigator class='flex' url="/pages/movie/list/list">👍 热门电影</navigator>
+  <navigator class='flex' url="/pages/user/user">👤 个人中心</navigator>
+</view>

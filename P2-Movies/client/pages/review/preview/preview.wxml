@@ -1,0 +1,27 @@
+<!--pages/review/preview/preview.wxml-->
+<view class='flex detail-card'>
+  <image class="poster {{isAudio && 'huge'}}" src='{{movie.image}}' mode='widthFix'></image>
+  <text class="title {{isAudio && 'huge'}}">{{movie.title}}</text>
+
+  <view>
+    <view class="flex row review-author">
+      <view class="avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>：
+      <button class='play-btn' bindtap='onTapPlay' wx:if="{{isAudio}}">{{isPlaying?'⬛':'▶ '+duration+'s'}}</button> 
+
+    </view>
+    <textarea class='review-text' value='{{text}}' disabled wx:if="{{!isAudio}}"/>
+  </view>
+
+
+  <view class='flex detail-buttons'>
+    <navigator open-type="navigateBack">
+      <button>◀ 重新编辑</button>
+    </navigator>
+    
+    <button bindtap='onTapPublish'>✈ 发布影评</button>
+  </view>
+
+</view>

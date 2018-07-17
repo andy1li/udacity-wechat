@@ -1,0 +1,13 @@
+/* pages/review/detail/detail.wxss */
+
+.unlogin-tips {
+  margin: 0 0 25rpx;
+}
+
+.is-audio .unlogin-tips {
+  margin-top: 50rpx;
+}
+
+.review-text {
+  height: 320rpx;
+}

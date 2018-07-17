@@ -80,7 +80,7 @@ Page({
 
   closeDrawer(e) {
     const { x, y } = e.detail
-    if (y > 60 || y > 100) { 
+    if (x > 120 && x > 60) { 
       this.setData({ drawerWidth: "0rpx" })
     }
   }
